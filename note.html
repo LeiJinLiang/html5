@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>web留言本</title>
+</head>
+<body>
+<h1>简单的web留言本</h1>
+<textarea id="memo" cols="30" rows="10"></textarea><br>
+<input type="button" value="追加" onclick="saveStorage('memo')">
+<input type="button" value="初始化" onclick="clearStorage('msg')">
+<hr>
+<p id="msg"></p>
+<script type="text/javascript" src="js/note.js"></script>
+</body>
+</html>
