@@ -27,21 +27,24 @@ console.log(x.constructor);
 x=_checkType(x);
 console.log(x);
 console.log('111'==111);
-Object.prototype.clone=function(){
-	if(typeof this!='object'||this==null){
-		return this;
-	}
-	var Constructor=this.constructor;
-	var newObj=new Constructor();
-	for(var i in this){
-		newObj[i]=this[i].clone();
-	}
-	return newObj;
-}
 var arr=[];
 console.info(arr.constructor===Array);
-// ------js map 遍历数组--
+// ------js 遍历 对象属性--
+function _checkPros(obj){
+	var props;
+	if(typeof obj=='function'){
+		return;
+	}else{
+		for(var p in obj){
+			props+= p + "=" + obj[p]+"<br />";
+		}
+	}
+	console.log(props);
+}
 
+var obj1={"name":"jinlei","age":25};
+
+_checkPros(obj1);
 
 
 
