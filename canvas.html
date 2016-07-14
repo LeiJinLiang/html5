@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas Demo</title>
+	<style type="text/css">
+		canvas{
+			display: flex;
+			flex-direction:row; 
+			width: 60%;
+			height:400px;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body onload="draw('canvas')">
+	<canvas id="canvas"></canvas>
+	<script type="text/javascript">
+		function draw(id){
+			var canvas=document.getElementById(id);
+			if(canvas==null){
+				return false;
+			}
+			var context=canvas.getContext('2d');
+			context.globalCompositeOperation="darken";
+			var image=new Image();
+			image.src="http://ww3.sinaimg.cn/bmiddle/d31109f5gw1f5sd907hzhj20m80tmti6.jpg";
+			image.onload=function(){
+				context.drawImage(image,0,0);
+				var image2=new Image();
+				image2.src="http://ww3.sinaimg.cn/bmiddle/d9906e1agw1f5s6kfz6pcj20j60mwdkf.jpg";
+				image2.onload=function(){
+					context.drawImage(image2,0,0);
+				}
+			}
+		}
+		
+	</script>
+</body>
+</html>

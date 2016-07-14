@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>filter滤镜</title>
+	<style>
+		div{
+			display: flex;
+			flex-direction:row; 
+		}
+		figure{
+			width: 50%;
+			text-align: center;
+		}
+		figure:nth-child(2){
+			/*filter: grayscale(100%);*/
+			/*-webkit-filter:grayscale(100%);*/
+			/*filter: sepia(100%);
+			-webkit-filter:sepia(100%);*/
+			/*filter: saturate(250%);
+			-webkit-filter:saturate(250%);*/
+			/*filter: opacity(50%);
+			-webkit-filter:opacity(50%);*/
+			/*filter: invert(100%);
+			-webkit-filter:invert(100%);*/
+			/*filter: hue-rotate(90deg);
+			-webkit-filter:hue-rotate(90deg);*/
+			filter:blur(2px);
+			-webkit-filter:blur(2px);
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<figure>
+			<img src="http://ww1.sinaimg.cn/bmiddle/4c56dd36gw1f5qpq2iqbdj22602w07wj.jpg" alt="">
+			<figcaption>原始图片</figcaption>
+		</figure>
+		<figure>
+			<img src="http://ww1.sinaimg.cn/bmiddle/4c56dd36gw1f5qpq2iqbdj22602w07wj.jpg" alt="">
+			<figcaption>使用滤镜</figcaption>
+		</figure>
+	</div>
+</body>
+</html>
