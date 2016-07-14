@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>time</title>
+</head>
+
+<body>
+    <img src="">
+    <script type="text/javascript">
+    // var count = function() {
+    //     var num = 10;
+    //     return function() {
+    //         num = num - 1;
+    //         if (num > -1) {
+    //             document.body.innerHTML = "<p>" + num + "</p>";
+    //         } else {
+    //             clearInterval(count(), 1000);
+    //         }
+    //         return num;
+    //     }
+    // }
+    // setInterval(count(),1000);
+    var ele_img=document.getElementsByTagName('img')[0];
+    var animate=function(){
+    	var num=0;
+    	return function(){
+    		num=num+1;
+    		if(num<35){
+    			ele_img.src="images/loading/"+num+".png";
+    			// console.log(num);
+    		}else{
+    			clearInterval(animate(),1000);	
+    		}
+    	}
+    }
+   setInterval(animate(),10);
+    </script>
+</body>
+
+</html>

@@ -38,7 +38,6 @@ var stringValue="  hello  world  ";
 var trimedStringValue=stringValue.trim();
 console.log(stringValue);
 console.log(trimedStringValue);
-
 var num=0;
 var max=10;
 function incrementNumber(){
@@ -51,5 +50,21 @@ function incrementNumber(){
 }
 
 setTimeout(incrementNumber,500);
+
+var name='World!';
+(function(){
+	var name;
+	if(typeof name=='undefined'){
+		name='Jack';
+		console.log('Goodbye'+name);
+	}else{
+		console.log('Hello'+name);
+	}
+})();
+
+
+
+
+
 
 

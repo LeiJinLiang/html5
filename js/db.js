@@ -19,3 +19,5 @@ function findStorage(id){
 	var target=document.getElementById(id);
 	target.innerHTML=result;
 }
+
+
